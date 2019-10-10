@@ -15,7 +15,7 @@ def calculate():
         n = float(form['n'])
         i = float(form['i'])
         d = (((1+i)**n)-1)/(((1+i)**n)*i)
-        calculate = (a/(d))
+        calculate = '${:,.2f}'.format(a/(d))
         return render_template('index.html', display=calculate, pageTitle="My Loan Calculator")
 
     return redirect("/")
